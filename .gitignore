@@ -3,7 +3,8 @@
 
 deps/
 out/
-server-1.[1234567890]/
+server-1.8/
+server-1.18/
 
 .eclipse/
 .gradle/
