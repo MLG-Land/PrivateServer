@@ -1,6 +1,6 @@
 package net.mlgland.privateserver;
 
-import net.mlgland.privateserver.events.EventHandler;
+import net.mlgland.privateserver.events.PlayerEvents;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -8,7 +8,7 @@ public class PrivateServer extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new EventHandler(), this);
+        getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[PrivateServer] Plugin has been enabled!");
     }
