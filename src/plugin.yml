@@ -1,0 +1,5 @@
+main: net.mlgland.privateserver.PrivateServer
+version: 1.0.0
+author: SidGames5
+name: PrivateServer
+api-version: 1.8
