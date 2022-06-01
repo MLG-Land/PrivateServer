@@ -1,0 +1,11 @@
+*.jar
+*.class
+
+deps/
+out/
+server/
+
+.eclipse/
+.gradle/
+.idea/
+.vscode/
