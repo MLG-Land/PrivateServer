@@ -18,9 +18,13 @@ public class PlayerEvents implements Listener {
         OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(playerUUID);
         Player player = offlinePlayer.getPlayer();
 
-        if (!player.hasPermission("privateserver.join")) {
-            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_WHITELIST, ChatColor.RED + "[PrivateServer] You do not have permission to join this server! Please contact a server administrator if you think this is incorrect.\n");
-            System.out.println("[PrivateServer] [Log] Player " + player.getName() + " has been kicked for insufficient permissions");
+        try {
+            if (!player.hasPermission("privateserver.join")) {
+                event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_WHITELIST, ChatColor.RED + "[PrivateServer] You do not have permission to join this server! Please contact a server administrator if you think this is incorrect.\n");
+                System.out.println("[PrivateServer] [Log] Player " + player.getName() + " has been kicked for insufficient permissions");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
 
     }
