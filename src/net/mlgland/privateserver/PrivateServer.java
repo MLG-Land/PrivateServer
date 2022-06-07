@@ -9,6 +9,7 @@ public class PrivateServer extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
+        FileManager.createPermissionsDatabaseFile();
 
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[PrivateServer] Plugin has been enabled!");
     }
