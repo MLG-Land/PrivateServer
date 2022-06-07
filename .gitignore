@@ -5,6 +5,7 @@ deps/
 out/
 server-1.8/
 server-1.18/
+server-1.19/
 
 .eclipse/
 .gradle/
