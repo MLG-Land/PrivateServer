@@ -45,10 +45,7 @@ public class PlayerEvents implements Listener {
         // get the player's UUID
         String uuid = event.getPlayer().getUniqueId().toString();
         // now we need to get the player's permissions
-        Boolean hasPerm = false;
-        if (event.getPlayer().hasPermission("privateserver.join")) {
-            hasPerm = true;
-        }
+        boolean hasPerm = event.getPlayer().hasPermission("privateserver.join");
         if (!hasPerm) {
             event.getPlayer().kickPlayer(ChatColor.RED
                     + "[PrivateServer] You do not have permission to join this server! Please contact a server administrator if you think this is incorrect.\n");
